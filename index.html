@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe jim_kak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+          }
+          
+          h1, h2, h3 {
+            margin-top: 0;
+          }
+          
+          h1 {
+            font-size: 2.5em;
+            text-align: center;
+          }
+          
+          h2 {
+            font-size: 1.8em;
+          }
+          
+          h3 {
+            font-size: 1.2em;
+          }
+          
+          table {
+            border-collapse: collapse;
+            margin: 20px auto;
+          }
+          
+          td {
+            padding: 10px;
+            vertical-align: top;
+          }
+          
+          label {
+            font-weight: bold;
+          }
+          
+          input[type="text"], select {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.2em;
+            padding: 5px;
+            width: 100%;
+            margin-bottom: 10px;
+          }
+          
+          input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+          }
+          
+          input[type="submit"], input[type="reset"] {
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          
+          input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #3e8e41;
+          }
+          
+          .error {
+            color: red;
+            font-weight: bold;
+          }
+          
+          .success {
+            color: green;
+            font-weight: bold;
+          }
+          
+    </style>
+</head>
+<body>
+    <h1>Subscribe jim_kak</h1>
+    <h2>information of user</h2>
+    <form action="" method="get" onsubmit="return false">
+        <table>
+            <tr>
+                <td>
+                    <h3>working information*</h3>
+                    <p>Name<br>
+                        <input type="text" name="name_member" size="55" autofocus> </p>
+                    <p>address<br>
+                        <input type="text" name="work_address" size="55" autofocus> </p>
+                    <p>city,state,mailcode<br>
+                        <input type="text" name="city_work" size="20" autofocus>
+                        <input type="text" name="state_work" size="20" autofocus>
+                        <input type="text" name="zip_work" size="8" autofocus> </p>
+                    <p>phone of work<br>
+                        <input type="text" name="phone_work" size="20" autofocus> </p>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <h3>Your information</h3>
+                    <p>Name<br>
+                        <input type="text" name="name_home" size="55" autofocus> </p>
+                    <p>address<br>
+                        <input type="text" name="home_address" size="55" autofocus> </p>
+                    <p>city,state,mailcode<br>
+                        <input type="text" name="city_home" size="20" autofocus>
+                        <input type="text" name="state_home" size="20" autofocus>
+                        <input type="text" name="zip_home" size="8" autofocus> </p>
+                    <p>your phone<br>
+                        <input type="text" name="phone_home" size="20" autofocus> </p>
+                </td>
+            </tr>
+        </table>
+        <p></p>
+        <strong>Subscription information</strong>
+        <input type="radio" name="subscription" value="monthly (4€)"> monthly (4 euro)
+        <input type="radio" name="subscription" value="six monthly (18€)"> six monthly (18 euro)
+        <input type="radio" name="subscription" value="yearly (35€)"> yearly (35 euro)
+        <input type="radio" name="subscription" value="free (0€)"> free (only my family)
+        <p></p>
+        <table>
+            <tr>
+                <td>
+                    <strong>you like:</strong><br>
+                    <input type="checkbox" name="hobby" value="walking">walking<br>
+                    <input type="checkbox" name="hobby" value="cycling">cycling<br>
+                    <input type="checkbox" name="hobby" value="chasing">chasing<br>
+                    <input type="checkbox" name="hobby" value="fishing">fishing<br>
+                </td>
+                <td>
+                    <strong>your age is:</strong>
+                    <p></p>
+                    <select name="age" size="4">
+                        <option value="<30">smaller than 30</option>
+                        <option value="30 ... 45">30 or 45</option>
+                        <option value="45 ... 60">45 or 60</option>
+                        <option value=">60">bigger than 60</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </p>
+    </form>
+    <h1>cklick: sift ctrl and j</h1>
+    <h3>*or school</h3>
+    <script>
+        const form = document.querySelector('form');
+const submitButton = form.querySelector('input[type="submit"]');
+
+submitButton.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Collect form data
+  const name_member = form.elements['name_member'].value;
+  const work_address = form.elements['work_address'].value;
+  const city_work = form.elements['city_work'].value;
+  const state_work = form.elements['state_work'].value;
+  const zip_work = form.elements['zip_work'].value;
+  const phone_work = form.elements['phone_work'].value;
+  const name_home = form.elements['name_home'].value;
+  const home_address = form.elements['home_address'].value;
+  const city_home = form.elements['city_home'].value;
+  const state_home = form.elements['state_home'].value;
+  const zip_home = form.elements['zip_home'].value;
+  const phone_home = form.elements['phone_home'].value;
+  const subscription = form.elements['subscription'].value;
+  const hobby = form.elements['hobby'].value;
+  const age = form.elements['age'].value;
+
+  // Create text string
+  const text = `Name (working): ${name_member}\nAddress (working): ${work_address}\nCity, State, Mailcode (working): ${city_work}, ${state_work}, ${zip_work}\nPhone (working): ${phone_work}\n\nName (home): ${name_home}\nAddress (home): ${home_address}\nCity, State, Mailcode (home): ${city_home}, ${state_home}, ${zip_home}\nPhone (home): ${phone_home}\n\nSubscription: ${subscription}\nHobbies: ${hobby}\nAge: ${age}`;
+
+  // Output the text string to console (for demonstration purposes)
+  console.log(text);
+});
+
+    </script>
+</body>
+</html>
